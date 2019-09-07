@@ -1,6 +1,5 @@
 {
-  "name": "form-reactive",
-  "name22": "angular6-firebase-electron2",
+  "name": "angular6-firebase-electron",
   "version": "0.0.0",
   "main": "main.js",
   "scripts": {

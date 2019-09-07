@@ -17,26 +17,20 @@ export class ContactService {
     // Inserting data into firebase db
     insertContact(contact: Contact) {
         this.contactList.push({
-            cpf:contact.cpf,
             firstName: contact.firstName,
             lastName: contact.lastName,
             phone: contact.phone,
-            email: contact.email,
-            created:Date(),
-//            modifield:null
+            email: contact.email
         });
     }
 
     // Updating data in firebase db
     updateContact(contact: Contact) {
         this.contactList.update(contact.$key, {
-            cpf:contact.cpf,
             firstName: contact.firstName,
             lastName: contact.lastName,
             phone: contact.phone,
-            email: contact.email,
-//            created:contact.created,
-            modifield:Date()
+            email: contact.email
         });
     }
 
