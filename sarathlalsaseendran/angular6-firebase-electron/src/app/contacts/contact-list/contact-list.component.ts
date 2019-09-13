@@ -16,10 +16,8 @@ export class ContactListComponent implements OnInit {
   ngOnInit() {
     const x = this.contactService.getData();
     x.snapshotChanges().subscribe(item => {
-//console.log(item);
       this.contactList = [];
       item.forEach(elem => {
-//console.log(elem);
         const y = elem.payload.toJSON();
         y['$key'] = elem.key;
         this.contactList.push(y as Contact);
@@ -28,7 +26,6 @@ export class ContactListComponent implements OnInit {
   }
 
   onUpdate(cont: Contact) {
-console.log(cont);
     this.contactService.selectedContact = Object.assign({}, cont);
   }
 

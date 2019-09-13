@@ -4,7 +4,6 @@ import { NgForm } from '@angular/forms';
 import { ContactService } from '../common/contact.service';
 
 import { ToastrService } from 'ngx-toastr';
-import { dashCaseToCamelCase } from '@angular/animations/browser/src/util';
 
 @Component({
     selector: 'app-contact',
@@ -24,11 +23,8 @@ export class ContactComponent implements OnInit {
     }
 
     onSubmit(contactForm: NgForm) {
-console.log('testrewt');
-
         if (contactForm.value.$key == null) {
             this.contactService.insertContact(contactForm.value);
-           // contactForm.created.value=Date();
             this.toastr.success('Saved successfully', 'Contact added');
         } else {
             this.contactService.updateContact(contactForm.value);
@@ -43,13 +39,10 @@ console.log('testrewt');
         }
         this.contactService.selectedContact = {
             $key: null,
-            cpf:'',
             firstName: '',
             lastName: '',
             phone: '',
             email: '',
-            created:null,
-            modifield:null
         };
     }
 }
