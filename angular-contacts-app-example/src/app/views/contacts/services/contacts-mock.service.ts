@@ -8,10 +8,12 @@ export class ContactsServiceMock {
     id: 1,
     name: 'john',
     email: 'john@gmail.com'
+    ,status: 'S'
   }, {
     id: 2,
     name: 'adam',
     email: 'adam@gmail.com'
+    ,status: 'S'
   }];
 
   index(): Observable<Contact[]> {
@@ -23,6 +25,7 @@ export class ContactsServiceMock {
       id: 1,
       name: 'john',
       email: 'john@gmail.com'
+      ,status: 'S'
     });
   }
 
@@ -31,6 +34,7 @@ export class ContactsServiceMock {
       id: 4,
       name: 'john doe',
       email: 'john@gmail.com'
+      ,status: 'S'
     });
   }
 
